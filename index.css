@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,900;1,300;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(0, 0, 0, 0.437);
+}
+.container, .profile-container {
+    margin: 0 auto;
+}
+.container {
+    background-color: rgba(0, 0, 0, 0.211);
+    max-width: 900px;
+}
+.profile-container {
+    background-color: whitesmoke;
+    display: grid;
+    padding-bottom: 2rem;  
+    box-shadow: 0px 0px 10px black;
+}
+.profile-container .liked {
+    display: none;
+}
+.header-icons, .profile, .like-dislike{
+    width: 100%;
+}
+.header-icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 5%;
+    height: 12vmin;
+}
+.profile {
+    position: relative;
+    color: whitesmoke;
+}
+.badge-accept {
+    position: absolute;
+    width: 40%;
+    left: 5%;
+    top: 10%;
+    transform: rotate(-45deg);
+}
+.badge-reject {
+    position: absolute;
+    width: 40%;
+    right: 5%;
+    top: 10%;
+    transform: rotate(45deg);
+}
+.profile-img {
+    display: block;
+    border-radius: 1rem;
+    width: 95%;
+    margin: 0 auto;
+}
+.profile-info {
+    position: absolute;
+    left: 7%;
+    bottom: 20%;
+    line-height: 3vmax;
+}
+.profile-info h3, .profile-info p {
+    text-shadow: 2px 2px 5px black;
+}
+.profile-info h3 {
+    font-size: 10vmin;
+}
+.profile-info p {
+    font-size: 4vmin;
+    padding-top: 1rem;
+    line-height: 3vmax;
+    max-width: 70%;
+}
+.liked {
+    text-align: left;
+}
+.liked-mini-details {
+    display: flex;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.197);
+    margin: 0.5rem 0 0.5rem 1rem;
+    border-radius: 20px;
+    padding: 1rem 0;
+}
+.liked-mini-details img {
+    display: block;
+    width: 15%;
+    margin-left: 1rem;
+    border-radius: 0.3rem;
+}
+.liked-mini-details p {
+    color: rgba(0, 0, 0, 0.528);
+    padding-left: 1rem;
+    text-shadow: -1px -1px 1px black;
+    font-weight: normal;
+    font-size: xx-large;
+
+}
+.liked-mini-details p span {
+    font-weight: lighter;
+    font-size: x-large;
+}
+.liked-mini-details img, .liked-mini-details div {
+    align-self: center;
+}
+.like-dislike {
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 2em;
+}
+button {
+    border: none;
+    background-color: inherit;
+}
+button.like-btn {
+    color: rgb(0, 236, 189);
+    font-weight: bolder;
+    width: inherit;
+    height: inherit;
+}
+button.dislike-btn {
+    color: rgb(255, 30, 86);
+    font-weight: bolder;
+    width: inherit;
+    height: inherit;
+}
+.btn {
+    background-color: white;
+    width: 15vmin;
+    height: 15vmin;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.129);
+    border-radius: 45%;
+    padding: 1.25rem;
+}
+.like-btn {
+    margin-left: 3.5vw;
+}
+.dislike-btn:hover, .dislike-btn:focus {
+    background-color: rgba(255,30,88, 0.096);
+}
+.like-btn:hover, .like-btn:focus {
+    background-color: rgba(0, 236, 189, 0.096);
+}
+.dislike-btn:active {
+    border: 5px solid rgba(255, 30, 86, 0.452);
+    border-style: inset;
+}
+.like-btn:active {
+    border: 5px solid rgba(0, 236, 189, 0.452);
+    border-style: inset;
+}
+.end-slide {
+    text-align: center;
+    width: auto;
+    color: rgba(0, 0, 0, 0.346);
+    text-shadow: 1px 1px 0px black;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.end { 
+    padding: 2rem;
+    margin: 0 auto;
+}
+@media (min-width: 500px) {
+    .profile-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+    .profile-container .liked {
+        display: grid;
+    }
+    .header-icons {
+        height: 4rem;
+        gap: 2rem;
+        justify-content: space-between;
+        -webkit-transform:scale(0.9);
+        -moz-transform:scale(0.9);
+        -ms-transform:scale(0.9);
+        transform:scale(0.9);
+        margin-top: 1rem;
+    }
+    .profile {
+        margin-top: 5vh;
+        -webkit-transform:scale(0.8);
+        -moz-transform:scale(0.8);
+        -ms-transform:scale(0.8);
+        transform:scale(0.8);
+    }
+    .profile-info {
+        bottom: 30%;
+    }
+    .profile-info h3 {
+        font-size: 7vmin;
+    }
+    .profile-info p {
+        font-size: 0.8rem;
+        line-height: 2vmax;
+        padding-top: 1rem;
+    } 
+    .btn {
+        width: 5rem;
+        height: 5rem;
+    }
+}
+@media (min-width: 800px) {
+    .profile-info {
+        bottom: 25%;
+    }
+    .profile-info h3 {
+        font-size: 2.7rem;
+    }
+    .profile-info p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+}
